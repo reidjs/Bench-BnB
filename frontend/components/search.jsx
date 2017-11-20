@@ -3,6 +3,7 @@ import BenchMap from './bench_map';
 import BenchIndex from './bench_index';
 
 const Search = ({ benches }) => {
+  console.log('hereasdf')
   return (
     <div> 
       <BenchMap />
