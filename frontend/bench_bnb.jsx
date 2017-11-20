@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { signUp, logIn, logOut } from './actions/session_actions';
+import { fetchBenches } from './actions/bench_actions';
 import Root from './components/root';
 import configureStore from './store/store';
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
+  window.fetchBenches = fetchBenches;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.logIn = logIn;
