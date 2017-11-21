@@ -2,12 +2,13 @@ import React from 'react';
 import BenchMap from './bench_map';
 import BenchIndex from './bench_index';
 
-const Search = ({ benches }) => {
-  console.log('hereasdf')
+const Search = ({ benches, fetchBenches }) => {
+  console.log(benches, fetchBenches)
+  // debugger
   return (
     <div> 
-      <BenchMap />
-      <BenchIndex benches={benches}/>
+      <BenchMap benches={benches}/>
+      <BenchIndex benches={benches} fetchBenches={fetchBenches}/>
     </div>
   )
 }
