@@ -1,6 +1,6 @@
 import { RECEIVE_BENCHES } from '../actions/bench_actions'
 import merge from 'lodash/merge'
-export const benchesReducer = (oldState = {}, action) =>  {
+export const benchesReducer = (oldState = {bounds: []}, action) =>  {
   Object.freeze(oldState)
   let newState;
   switch(action.type) {
